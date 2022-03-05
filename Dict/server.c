@@ -139,7 +139,7 @@ void *pthread_handle(void *client)
         }
     } 
     close(c_info.fd);
-    pthread_exit;
+    pthread_exit();
 }
 //查询单词功能函数
 char *order_check(char *word, int* flag)
@@ -272,5 +272,5 @@ char *order_change(char *account,char *password,char *newpassword)
 void order_exit(int fd)
 {
     close(fd);
-    pthread_exit;
+    pthread_exit();
 }
