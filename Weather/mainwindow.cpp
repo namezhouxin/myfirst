@@ -72,8 +72,6 @@ void MainWindow::display()
     QString report = QString("%1 %2").arg(reporttime).arg("更新");
     QString level = QString("%1 %2").arg("空气质量").arg(airlevel);
     QString tip = QString("%1 %2").arg("温馨提示:").arg(airtips);
-
-
     ui->postion->setText(pc);
     ui->weather->setText(wea);
     ui->realtime->setText(real);
@@ -101,7 +99,7 @@ void MainWindow::on_pushButton_clicked()
     {
         return;
     }
-      send_net(City);
+    send_net(City);
     ui->lineEdit->clear();
 }
 
